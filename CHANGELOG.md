@@ -1,12 +1,12 @@
 # Change Log
 
-# 0.0.2 (2022-11-01)
+All notable changes to this project will be documented in this file.
+
+[Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
+
+# 1.0.0 (2023-03-21)
 
 
-### Bug fixes
+### Features
 
-* remove boolean case condition 
-
-# 0.0.1 (2022-10-13)
-
-### Initial release
+* Initial Release
