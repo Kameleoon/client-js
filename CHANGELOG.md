@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.1.1 (2023-04-05)
+
+
+### Fix
+
+* External request dispatcher
+
 # 1.1.0 (2023-03-22)
 
 
