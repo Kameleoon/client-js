@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.3.0 (2023-04-21)
+
+
+### Features
+
+* Added method [`getEngineTrackingCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#sending-exposure-events-to-external-tools)
+
 # 1.2.0 (2023-04-14)
 
 ### Features
@@ -21,7 +28,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug fixes
 
-* External request dispatcher
+* Internal bug fixes
 
 # 1.1.0 (2023-03-22)
 
@@ -29,6 +36,7 @@ All notable changes to this project will be documented in this file.
 ### Features 
 
 - License changed from `GPL3.0` to `ISC`
+
 
 # 1.0.0 (2023-03-21)
 
