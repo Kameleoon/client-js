@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.3.1 (2023-04-22)
+
+
+### Bug fixes
+
+* core dependency fix 
+
 # 1.3.0 (2023-04-21)
 
 
