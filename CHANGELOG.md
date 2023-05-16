@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.3.3 (2023-05-16)
+
+
+### Bug fixes
+
+* Initialization throws an error
+
 # 1.3.2 (2023-04-24)
 
 
@@ -16,7 +23,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug fixes
 
-* core dependency fix 
+* core dependency fix
 
 # 1.3.0 (2023-04-21)
 
@@ -47,7 +54,7 @@ All notable changes to this project will be documented in this file.
 # 1.1.0 (2023-03-22)
 
 
-### Features 
+### Features
 
 - License changed from `GPL3.0` to `ISC`
 
