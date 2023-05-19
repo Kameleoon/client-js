@@ -4,12 +4,20 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.4.0 (2023-05-19)
+
+
+### Features
+
+* Added method [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#obtain-custom-data-from-kameleoon-data-api)
+* Added offline mode for [`initialize`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#initialize-kameleoon-client) method.
+
 # 1.3.3 (2023-05-16)
 
 
 ### Bug fixes
 
-* Initialization throws an error
+* Initialization throws error
 
 # 1.3.2 (2023-04-24)
 
