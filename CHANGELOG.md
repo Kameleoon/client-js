@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.4.4 (2023-06-01)
+
+
+### Bug fixes
+
+* Empty visitor code is no more allowed
+* Incorrect tracking body upon triggering an experiment
+
 # 1.4.3 (2023-05-24)
 
 
