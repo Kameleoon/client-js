@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.5.1 (2023-06-30)
+
+
+### Bug fixes
+
+* Tracking data duplications
+
 # 1.5.0 (2023-06-28)
 
 
@@ -22,6 +29,7 @@ All notable changes to this project will be documented in this file.
 - [`flushData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#flush-tracking-data) `visitorCode` parameter is now optional.
 - Custom data that is marked as `local only` on Kameleoon Platform is now only used for targeting (not flushed with tracking requests).
 - JavaScript SDK is now available as a single file from the static server, see the [details](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#installation)
+
 
 # 1.4.4 (2023-06-01)
 
