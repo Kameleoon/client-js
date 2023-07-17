@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.5.2 (2023-07-17)
+
+
+### Bug fixes
+
+- Typescript `.d.ts` files have proper relative path resolution.
+
 # 1.5.1 (2023-06-30)
 
 
