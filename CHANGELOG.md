@@ -10,6 +10,13 @@ All notable changes to this project will be documented in this file.
 ### Bug fixes
 
 - Typescript `.d.ts` files have proper relative path resolution.
+- Unused tracking parameters are no longer sent.
+- Real-time update events now get the latest configuration.
+
+### Features
+
+- When the client is initialized in offline mode, in case of network issues failed tracking requests made by [`flushData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#flushdata), [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#trackconversion), [`triggerExperiment`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#triggerexperiment), [`getFeatureFlagVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#getfeatureflagvariationkey) or [`getFeatureFlagVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#getfeatureflagvariable) will be sent anew once the client is back online.
+- Minor optimization for checking [targeting conditions](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#list-of-supported-targeting-conditions) of a segment.
 
 # 1.5.1 (2023-06-30)
 
