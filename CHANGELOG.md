@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.6.0 (2023-07-21)
+
+
+### Bug fixes
+
+- Checks against unsupported conditions are now truthy.
+
+### Features
+
+- `flushData` has been deprecated in favor of [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#flush).
+- [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#flush) sends failed tracking requests that were stored locally during the offline mode at first and then proceeds with the latest request.
+
 # 1.5.2 (2023-07-17)
 
 
