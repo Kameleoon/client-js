@@ -4,12 +4,16 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
-# 1.6.0 (2023-07-21)
+# 1.6.1 (2023-07-26)
 
 
 ### Bug fixes
 
-- Checks against unsupported conditions are now truthy.
+* [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#flush) now sends offline tracking requests even if there's no new data to track.
+* Timestamps for offline requests are set correctly.
+
+# 1.6.0 (2023-07-21)
+
 
 ### Features
 
