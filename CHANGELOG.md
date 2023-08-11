@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.7.0 (2023-08-11)
+
+
+### Bug fixes
+
+* Empty Custom Data is now sending activity tracking event
+
+### Features
+
+* Added [Cross Device Custom Data Synchronization](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#cross-device-custom-data-synchronization) capabilities
+
 # 1.6.1 (2023-07-26)
 
 
