@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 1.7.2 (2023-08-31)
+
+
+### Bug fixes
+
+* `Custom Data Condition` now handles index `0` properly
+
 # 1.7.1 (2023-08-25)
 
 
