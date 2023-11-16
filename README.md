@@ -1,7 +1,7 @@
 # Kameleoon JavaScript SDK
 
 ## Introduction
-Kameleoon JavaScript SDK is used to work with Kameleoon Feature Flags and Experiments using native JavaScript api. 
+Kameleoon JavaScript SDK is used to work with Kameleoon Feature Flags and Experiments using native JavaScript api.
 Integration of this SDK into web application is easy, and its footprint is low.
 
 This page describes the most basic `KameleoonClient` configuration, for more in-depth review of all the methods and configuration options follow [Official Kameleoon Documentation](https://developers.kameleoon.com/javascript-sdk.html)
@@ -22,7 +22,7 @@ This page describes the most basic `KameleoonClient` configuration, for more in-
 ```ts
 import { KameleoonClient } from '@kameleoon/javascript-sdk';
 
-const client = new KameleoonClient('my_site_code');
+const client = new KameleoonClient({ siteCode: 'my_site_code' });
 ```
 3. Asynchronously initialize client to fetch the configuration from remote server and handle possible errors
 ```ts
@@ -35,11 +35,7 @@ try {
 4. `KameleoonClient` is ready to go!
 ```ts
 const visitorCode = KameleoonUtils.getVisitorCode('www.example.com');
-const experimentId = 100;
 const customDataIndex = 0;
-
-// -- Get variation id
-const variationId = client.triggerExperiment('my_visitor_code', experimentId);
 
 // -- Add targeting data
 client.addData(visitorCode, new CustomData(customDataIndex, 'my_data'));
