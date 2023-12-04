@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 2.2.1 (2023-12-04)
+
+
+### Bug fixes
+
+* Client cookie is now set properly
+
 # 2.2.0 (2023-11-30)
 
 
@@ -23,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ### Breaking change
 
-* SDK stopped the support of Web Experiments, the following methods were removed:
+* SDK stopped the support of the following methods were:
   - `getExperiments`
   - `getVisitorExperiments`
   - `triggerExperiment`
