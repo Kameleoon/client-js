@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 2.3.0 (2023-12-11)
+
+
+### Features
+
+* [flush](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#flush) and [trackConversion](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#trackConversion) methods now have a new optional parameter `isUniqueIdentifier` used for extra [Kameleoon Cross-device Experimentation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation) capabilities
+* [getVisitorCode](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#getvisitorcode) and [setLegalConsent](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#setlegalconsent) methods now have an overload allowing methods to be used without parameters (instead of providing and empty object `{}`)
+
+### Bug fixes
+
+* Targeting data cleanup caused `TypeError`
+
+### Refactor
+
+* Migration to Client Configuration API v2.0
+
 # 2.2.1 (2023-12-04)
 
 
