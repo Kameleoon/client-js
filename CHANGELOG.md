@@ -4,12 +4,23 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 2.5.0 (2024-01-18)
+
+
+### Bug fixes
+
+* SDK threw an error reading storage when migrating from older SDK versions
+
+### Features
+
+* Added new SDK `configuration` parameter [`requestTimeout`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#1-initializing-the-kameleoon-client), which defines maximum time in _milliseconds_ after which any SDK network request will fail
+
 # 2.4.1 (2023-12-15)
 
 
 ### Bug fixes
 
-* Fixed a bug where [Conversions](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#conversion) could be erroneously counted twice in specific scenarios.
+* Fix nonce for `Conversion` data
 
 # 2.4.0 (2023-12-12)
 
@@ -21,7 +32,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug fixes
 
-* Custom Data mapping identifier wasn't tracked correctly 
+* Custom Data mapping identifier wasn't tracked correctly
 
 # 2.3.0 (2023-12-11)
 
@@ -34,10 +45,6 @@ All notable changes to this project will be documented in this file.
 ### Bug fixes
 
 * Targeting data cleanup caused `TypeError`
-
-### Refactor
-
-* Migration to Client Configuration API v2.0
 
 # 2.2.1 (2023-12-04)
 
@@ -55,10 +62,10 @@ All notable changes to this project will be documented in this file.
 
 # 2.1.0 (2023-11-24)
 
+
 ### Features
 
 * Added `setLegalConsent` method to determine the types data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy).
-* Migration to new CC end-point
 
 # 2.0.0 (2023-11-16)
 
