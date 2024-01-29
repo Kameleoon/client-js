@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 2.5.1 (2024-01-29)
+
+
+### Bug fixes
+
+* Context binding in [setLegalConsent](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#setlegalconsent) method
+
 # 2.5.0 (2024-01-18)
 
 
