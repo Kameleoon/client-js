@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 [Project Homepage](https://developers.kameleoon.com/javascript-sdk.html)
 
+# 2.5.2 (2024-02-07)
+
+
+### Bug fixes
+
+* Tracking wasn't sent if consent is required
+
 # 2.5.1 (2024-01-29)
 
 
