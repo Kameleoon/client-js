@@ -11,14 +11,15 @@ This page describes the most basic `KameleoonClient` configuration, for more in-
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Using KameleoonClient (Recommended)](#using-kameleoonclient-recommended)
-- [Legacy KameleoonUtils Method (Deprecated)](#legacy-kameleoonutils-method-deprecated)
+- [Usage Example](#usage-example)
+- [External Dependencies](#external-dependencies)
 
 ## Installation
 
 - **npm** - `npm install @kameleoon/javascript-sdk`
 - **yarn** - `yarn add @kameleoon/javascript-sdk`
 - **pnpm** - `pnpm add @kameleoon/javascript-sdk`
+- **bun** - `bun install @kameleoon/javascript-sdk`
 
 ## Configuration
 
@@ -31,56 +32,155 @@ import { KameleoonClient } from '@kameleoon/javascript-sdk';
 const client = new KameleoonClient({ siteCode: 'my_site_code' });
 ```
 
-3. Asynchronously initialize client to fetch the configuration from remote server and handle possible errors
+## Usage Example
 
 ```ts
-try {
-  await client.initialize();
-} catch (error) {
-  // Handle error
+// -- Wait for the client initialization
+await client.initialize();
+
+// -- Generate or obtain a visitor code
+const visitorCode = KameleoonClient.getVisitorCode();
+
+// -- Add targeting data
+const customDataIndex = 0;
+client.addData(visitorCode, new CustomData(customDataIndex, 'my_data'));
+
+// -- Check if the feature flag is active
+const isActive = client.isFeatureFlagActive(visitorCode, 'my_feature_key');
+```
+
+## External Dependencies
+
+JavaScript SDK utilizes certain external dependencies, which are required to be able to use specific APIs.
+
+There are several possible external dependencies used by Kameleoon JavaScript SDK, all of them have built-in implementation in SDK but can optionally be implemented by a developer using an SDK.
+
+Here is the list of such dependencies:
+
+- `visitorCodeManager` is responsible for managing the visitor code and cookies
+- `eventSource` is responsible for Real Time Updates(Streaming) for SDK
+- `storage` is responsible for storing all SDK related data
+
+Following is the example implementation for each dependency.
+
+### visitorCodeManager
+
+```ts
+import {
+  KameleoonClient,
+  IExternalVisitorCodeManager,
+} from '@kameleoon/javascript-sdk';
+
+class MyVisitorCodeManager implements IExternalVisitorCodeManager {
+  // - Get visitor code from browser cookies
+  public getData(key: string): string | null {
+    const cookieString = document.cookie;
+
+    const cookieEntry = cookieString.split(' ;').find((keyValue) => {
+      const [cookieKey, cookieValue] = keyValue.split('=');
+
+      return cookieKey === key && cookieValue !== '';
+    });
+
+    if (cookieEntry) {
+      const [_, value] = cookieEntry.split('=');
+
+      return value;
+    }
+
+    return null;
+  }
+
+  // - Set visitor code back to browser cookies
+  public setData({
+    visitorCode,
+    domain,
+    maxAge,
+    key,
+    path,
+  }: SetDataParametersType): void {
+    let resultCookie = `${key}=${visitorCode}; Max-Age=${maxAge}; Path=${path}`;
+
+    if (domain) {
+      resultCookie += `; Domain=${domain}`;
+    }
+
+    document.cookie = resultCookie;
+  }
 }
+
+const client = new KameleoonClient({
+  siteCode: "my_site_code",
+  externals: {
+    visitorCodeManager: new MyVisitorCodeManager();
+  }
+});
 ```
 
-## Using KameleoonClient (Recommended)
-
-1. `KameleoonClient` is ready to go! Fetch the visitor code and add Custom Data:
+### eventSource
 
 ```ts
-const visitorCode = client.getVisitorCode();
-const customDataIndex = 0;
+import { KameleoonClient, IExternalEventSource } from '@kameleoon/javascript-sdk';
 
-// -- Add targeting data
-client.addData(visitorCode, new CustomData(customDataIndex, 'my_data'));
+class MyEventSource implements IExternalEventSource {
+  private eventSource?: EventSource;
+
+  public open({
+    eventType,
+    onEvent,
+    url,
+  }: EventSourceOpenParametersType): void {
+    // - Use any suitable EventSource implementation here
+    const eventSource = new EventSource(url);
+
+    this.eventSource = eventSource;
+    this.eventSource.addEventListener(eventType, onEvent);
+  }
+
+  public close(): void {
+    if (this.eventSource) {
+      this.eventSource.close();
+    }
+  }
+}
+
+const client = new KameleoonClient({
+  siteCode: "my_site_code",
+  externals: {
+    eventSource: new MyEventSource();
+  }
+});
 ```
 
-2. Check if a feature is active for a visitor:
+### storage
 
 ```ts
-const isMyFeatureActive = client.isFeatureFlagActive(
-  visitorCode,
-  'my_feature_key',
-);
-```
+import { KameleoonClient, IExternalStorage } from '@kameleoon/javascript-sdk';
 
-## Legacy KameleoonUtils Method (Deprecated)
+const storage = new Map();
 
-> **Note:** The `getVisitorCode` method from `KameleoonUtils` is deprecated and will be removed in a future release. Use [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#kameleoonclient-getvisitorcode) method from `KameleoonClient` instead.
+class MyStorage<T> implements IExternalStorage<T> {
+  public read(key: string): T {
+    // - Utilize the storage implementation of your choice
+    const data = storage.get(key);
 
-1. Fetch the visitor code and add Custom Data:
+    // - Optionally handle errors
+    if (!data) {
+      throw new Error("Couldn't read data from myStorage");
+    }
 
-```ts
-const visitorCode = KameleoonUtils.getVisitorCode('www.example.com');
-const customDataIndex = 0;
+    return data;
+  }
 
-// -- Add targeting data
-client.addData(visitorCode, new CustomData(customDataIndex, 'my_data'));
-```
+  public write(key: string, data: T): void {
+    storage.set(key, data);
+  }
+}
 
-2. Check if a feature is active for a visitor:
-
-```ts
-const isMyFeatureActive = client.isFeatureFlagActive(
-  visitorCode,
-  'my_feature_key',
-);
+const client = new KameleoonClient({
+  siteCode: "my_site_code",
+  externals: {
+    storage: new MyStorage();
+  }
+});
 ```
