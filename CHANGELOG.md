@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.1 (2024-02-21)
+
+### Patch Changes
+
+- Added support for additional Data API servers across the world for even faster network requests
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.0.1
+
 ## 3.0.0 (2024-02-16)
 
 ### Breaking Changes
