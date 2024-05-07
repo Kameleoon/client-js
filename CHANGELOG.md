@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.2.0 (2024-05-07)
+
+### Features
+
+- New method [`getActiveFeatureFlags`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#getactivefeatureflags) for retrieving feature flags that are active for visitor with detailed variation and variables information.
+
+### Patch Changes
+
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.2.0
+
 ## 3.1.0 (2024-04-19)
 
 ### Features
