@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.4.0 (2024-06-21)
+
+### Features
+
+- Added new [`networkDomain`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#1-initializing-the-kameleoon-client) parameter in `SDKConfigurationType` for configuring custom network domain for all outgoing requests.
+- [`SDKConfigurationType`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#1-initializing-the-kameleoon-client) parameter `domain` was deprecated and will be removed in the next major version. Instead new `cookieDomain` is available.
+- Added new optional [External Dependency](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#external-dependencies) - [Requester](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#requester) for implementing custom network request handler
+- Added new `KameleoonUtils` methods:
+  - [`getCookieValue`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#getcookievalue) for extracting cookie value from cookie string
+  - [`simulateSuccessRequest`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#simulatesuccessrequest) for mocking successful network requests when implementing custom `Requester`
+
+### Patch Changes
+
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.4.0
+
 ## 3.3.0 (2024-05-24)
 
 ### Features
