@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.4.3 (2024-07-19)
+
+### Patch Changes
+
+- Improved random generation for `nonce` values
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.4.3
+
 ## 3.4.2 (2024-07-16)
 
 ### Patch Changes
