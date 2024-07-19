@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.4.4 (2024-07-19)
+
+### Patch Changes
+
+- Fix previous release, which didn't contain all the described changes
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.4.4
+
 ## 3.4.3 (2024-07-19)
 
 ### Patch Changes
