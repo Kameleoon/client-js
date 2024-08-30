@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.4.7 (2024-08-30)
+
+### Patch Changes
+
+- Fixed the issue - some feature experiment conditions could resolve to incorrect values on interval configuration update
+- Fixed the `ReferenceError` issue appearing on `KameleoonClient` instantiation when `window` object is not available
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@4.4.7
+
 ## 3.4.6 (2024-08-15)
 
 ### Patch Changes
