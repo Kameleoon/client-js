@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.2.3 (2024-12-25)
+
+### Patch Changes
+
+- Expanded the list of objects in the interval cleanup process to include visitor consent data and variation data.
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.2.3
+
 ## 4.2.2 (2024-12-19)
 
 ### Patch Changes
