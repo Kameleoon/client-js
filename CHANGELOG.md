@@ -1,5 +1,18 @@
 # Change Log
 
+## 4.4.0 (2025-01-17)
+
+### Features
+
+- Added support for specifying a custom `Environment` value as a string in the [configuration parameters][configurationParameters], alongside the standard options.
+
+[configurationParameters]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#configuration-parameters
+
+### Patch Changes
+
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.4.0
+
 ## 4.3.0 (2025-01-17)
 
 ### Features
