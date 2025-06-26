@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.10.1 (2025-06-26)
+
+### Patch Changes
+
+- Fixed synchronization of the **visitor's legal consent** with the Kameleoon Engine (`engine.js`) when the SDK was initialized before the consent value was set.
+- Fixed a potential error: `Cannot read property 'createCondition' of undefined`, which could occur due to differences in how various JavaScript bundlers or module loaders handle dependency initialization timing.
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.10.1
+
 ## 4.10.0 (2025-05-26)
 
 ### Features
