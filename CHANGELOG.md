@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.12.0 (2025-07-10)
+
+### Features
+
+- Introducing a fallback configuration mechanism via the [`defaultDataFile`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#configuration-parameters) parameter. If no cached configuration is available, the SDK immediately uses the provided default. For version control, the SDK prioritizes the default configuration if its `dateModified` timestamp is more recent than the cached version.
+
+### Patch Changes
+
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.12.0
+
 ## 4.11.0 (2025-06-27)
 
 ### Features
