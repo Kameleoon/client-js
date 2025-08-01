@@ -2,15 +2,19 @@
 
 ## 4.14.2 (2025-08-01)
 
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
+
 ### Patch Changes
 
 - Updated dependencies
   - @kameleoon/javascript-sdk-core@5.14.2
 
+## 4.14.1 (2025-07-30)
+
 > [!WARNING]
 > If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
-## 4.14.1 (2025-07-30)
 
 ### Patch Changes
 
@@ -20,21 +24,18 @@
 - Updated dependencies
   - @kameleoon/javascript-sdk-core@5.14.1
 
-> [!WARNING]
-> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
-
 [defaultDataFile]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#configuration-parameters
 
 ## 4.14.0 (2025-07-24)
+
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
 ### Features
 
 - Migrated the build system for the NPM package from Babel (which previously generated multiple minified JS files) to Rollup, producing a single, optimized bundle.
   - Significantly reduced package size by consolidating files and improving tree-shaking.
   - Added native ESM support via modern Rollup outputs for better compatibility with modern bundlers.
-
-> [!WARNING]
-> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
 ### Patch Changes
 
