@@ -1,5 +1,18 @@
 # Change Log
 
+## 4.14.3 (2025-08-12)
+
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
+
+### Patch Changes
+
+- Fixed an issue where [`Cookie`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk#cookie) would throw an exception when parsing from a string if the cookie value was empty.
+- Removed the [React Native](https://reactnative.dev/) dependency from the browser bundle to avoid build-time warnings and errors.
+- Corrected automatic detection of the [`Browser`](browser) version to parse versions as floats instead of integers.
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.14.3
+
 ## 4.14.2 (2025-08-01)
 
 > [!WARNING]
@@ -14,7 +27,6 @@
 
 > [!WARNING]
 > If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
-
 
 ### Patch Changes
 
