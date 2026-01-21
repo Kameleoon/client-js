@@ -1,10 +1,20 @@
 # Change Log
 
-## 4.17.1 (2025-12-24)
+## 4.17.2 (2026-01-21)
 
 > [!WARNING]
 > If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
+### Patch Changes
+
+- Stability and performance improvements
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.17.2
+
+## 4.17.1 (2025-12-24)
+
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
 ### Patch Changes
 
@@ -19,7 +29,7 @@
 
 ### Features
 
-- - Fixed an issue where **[Kameleoon Data](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#data-types)** was retained beyond the configured **[`targetingDataCleanupInterval`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#configuration-parameters)** if the **[Data API](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/)** encountered internal errors. Expired data is now reliably removed in accordance with the cleanup interval.
+- Fixed an issue where **[Kameleoon Data](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#data-types)** was retained beyond the configured **[`targetingDataCleanupInterval`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk/#configuration-parameters)** if the **[Data API](https://developers.kameleoon.com/apis/data-api-rest/all-endpoints/post-visit-events/)** encountered internal errors. Expired data is now reliably removed in accordance with the cleanup interval.
 - Updated evaluation and tracking logic to comply with GDPR requirements when consent is not given:
   - If behavior is **partially blocked**, the default variation will be returned.
   - If behavior is **completely blocked**, an exception will be thrown.
