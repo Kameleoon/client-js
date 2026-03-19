@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.19.1 (2026-03-19)
+
+### Patch Changes
+
+- Stability and performance improvements
+- Updated dependencies
+  - @kameleoon/javascript-sdk-core@5.20.0
+
 ## 4.19.0 (2026-03-04)
 
 ### Features
