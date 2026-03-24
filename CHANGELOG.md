@@ -2,6 +2,9 @@
 
 ## 4.20.0 (2026-03-23)
 
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
+
 ### Features
 
 - Added support for variation simulation when feature flags are **inactive (OFF state)** across the following methods:
@@ -22,6 +25,9 @@
 
 ## 4.19.1 (2026-03-19)
 
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
+
 ### Patch Changes
 
 - Stability and performance improvements
@@ -29,6 +35,9 @@
   - @kameleoon/javascript-sdk-core@5.20.0
 
 ## 4.19.0 (2026-03-04)
+
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
 ### Features
 
@@ -42,6 +51,9 @@
   - @kameleoon/javascript-sdk-core@5.19.0
 
 ## 4.18.0 (2026-02-13)
+
+> [!WARNING]
+> If you're upgrading from a version earlier than 4.14.0 and run into any unexpected build or SDK-related issues, please reach out to the Kameleoon Support Team. We're here to ensure your transition is smooth and will promptly address any concerns.
 
 ### Features
 
