@@ -5,7 +5,7 @@
 Kameleoon JavaScript SDK is used to work with Kameleoon Feature Flags and Experiments using native JavaScript api.
 Integration of this SDK into web application is easy, and its footprint is low.
 
-This page describes the most basic `KameleoonClient` configuration, for more in-depth review of all the methods and configuration options follow [Official Kameleoon Documentation](https://developers.kameleoon.com/javascript-sdk.html)
+This page describes the most basic `KameleoonClient` configuration, for more in-depth review of all the methods and configuration options follow [Official Kameleoon Documentation](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/js-sdk)
 
 ## Contents
 
